@@ -5,6 +5,10 @@ extern GGEngine::Application* GGEngine::CreateApplication();
 
 int main(/*int argc, char** argv*/)
 {
+    GGEngine::Log::Init();
+    GGE_CORE_WARN("Init log!");
+    GGE_INFO("Hello World");
+
     auto app = GGEngine::CreateApplication();
     app->Run();
     delete app;

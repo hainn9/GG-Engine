@@ -4,6 +4,9 @@
 // Use for Game Application
 #include "GGEngine_Core/application.h"
 
+// Logging
+#include "GGEngine_Core/log.h"
+
 // ---------EntryPoint---------------
 #include "GGEngine_Core/entrypoint.h"
 // ----------------------------------

@@ -23,15 +23,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    GGEngine_Core/application.cpp
+    GGEngine_Core/application.cpp \
+    GGEngine_Core/log.cpp
 
 HEADERS += \
         ggengine.h \
     GGEngine_Core/application.h \
     GGEngine_Core/core.h \
-    GGEngine_Core/entrypoint.h
+    GGEngine_Core/entrypoint.h \
+    GGEngine_Core/log.h
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+# Logging
+INCLUDEPATH += $$PWD/../GGEngine/Logging/include
+DEPENDPATH += $$PWD/../GGEngine/Logging/include

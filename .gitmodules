@@ -1,0 +1,3 @@
+[submodule "GGEngine/Vendor"]
+	path = GGEngine/Vendor
+	url = https://github.com/gabime/spdlog
