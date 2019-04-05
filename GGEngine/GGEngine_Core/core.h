@@ -1,5 +1,5 @@
-#ifndef GGENGINE_GLOBAL_H
-#define GGENGINE_GLOBAL_H
+#ifndef CORE_H
+#define CORE_H
 
 #include <QtCore/qglobal.h>
 
@@ -11,10 +11,10 @@
 #    define Q_DECL_IMPORT     __attribute__((visibility("default")))
 #  endif
 
-#if defined(GGENGINE_LIBRARY)
+#if defined(GGE_BUILD_DLL)
 #  define GGE_API Q_DECL_EXPORT
 #else
 #  define GGE_API Q_DECL_IMPORT
 #endif
 
-#endif // GGENGINE_GLOBAL_H
+#endif // CORE_H

@@ -9,7 +9,7 @@ QT       -= gui
 TARGET = GGEngine
 TEMPLATE = lib
 
-DEFINES += GGENGINE_LIBRARY
+DEFINES += GGE_BUILD_DLL
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -23,11 +23,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        ggengine.cpp
+    GGEngine_Core/application.cpp
 
 HEADERS += \
         ggengine.h \
-        ggengine_global.h 
+    GGEngine_Core/application.h \
+    GGEngine_Core/core.h \
+    GGEngine_Core/entrypoint.h
 
 unix {
     target.path = /usr/lib

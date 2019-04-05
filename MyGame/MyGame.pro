@@ -5,7 +5,7 @@ CONFIG -= app_bundle
 
 
 SOURCES += \
-    Application.cpp
+    GameApp.cpp
 
 macx: LIBS += -L$$OUT_PWD/../GGEngine/ -lGGEngine
 

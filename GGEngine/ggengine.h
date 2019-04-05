@@ -1,13 +1,11 @@
 #ifndef GGENGINE_H
 #define GGENGINE_H
 
-#include "ggengine_global.h"
-#include <stdio.h>
+// Use for Game Application
+#include "GGEngine_Core/application.h"
 
-namespace GGEngine {
-
-    GGE_API void Print();
-
-}
+// ---------EntryPoint---------------
+#include "GGEngine_Core/entrypoint.h"
+// ----------------------------------
 
 #endif // GGENGINE_H
