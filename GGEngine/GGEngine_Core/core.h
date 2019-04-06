@@ -17,6 +17,12 @@
 #  define GGE_API Q_DECL_IMPORT
 #endif
 
+//#ifdef GGE_DEBUG
+//#define GGE_ASSERT(x, ...) { if(!(x)) { GGE_ERROR("Assertion Failed: {0}", __VA_ARGS__); asm("int $3"); } }
+//#define GGE_CORE_ASSERT(x, ...) { if(!(x)) { GGE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); asm("int $3"); } }
+//#else
+//#define GGE_ASSERT(x, ...)
+//#define GGE_CORE_ASSERT(x, ...)
 
 #define BIT(x) (1<<x)
 #endif // CORE_H

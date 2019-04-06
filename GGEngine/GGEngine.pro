@@ -24,7 +24,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     GGEngine_Core/application.cpp \
-    GGEngine_Core/log.cpp
+    GGEngine_Core/log.cpp \
+    GGEngine_Core/opengl_window.cpp
 
 HEADERS += \
         ggengine.h \
@@ -35,7 +36,9 @@ HEADERS += \
     GGEngine_Core/Event/event.h \
     GGEngine_Core/Event/applicationevent.h \
     GGEngine_Core/Event/mouseevent.h \
-    GGEngine_Core/Event/keyevent.h
+    GGEngine_Core/Event/keyevent.h \
+    GGEngine_Core/window.h \
+    GGEngine_Core/opengl_window.h
 
 unix {
     target.path = /usr/lib
@@ -45,3 +48,15 @@ unix {
 # Logging
 INCLUDEPATH += $$PWD/Logging/include
 DEPENDPATH += $$PWD/Logging/include
+
+macx: LIBS += -L$$PWD/GLFW/ -lglfw3
+
+INCLUDEPATH += $$PWD/GLFW/include
+DEPENDPATH += $$PWD/GLFW/include
+
+macx: PRE_TARGETDEPS += $$PWD/GLFW/libglfw3.a
+QMAKE_LFLAGS += -F/System/Library/Frameworks/
+LIBS += -framework OpenGL \
+        -framework Cocoa \
+        -framework CoreVideo \
+        -framework IOKit \
