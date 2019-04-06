@@ -31,7 +31,11 @@ HEADERS += \
     GGEngine_Core/application.h \
     GGEngine_Core/core.h \
     GGEngine_Core/entrypoint.h \
-    GGEngine_Core/log.h
+    GGEngine_Core/log.h \
+    GGEngine_Core/Event/event.h \
+    GGEngine_Core/Event/applicationevent.h \
+    GGEngine_Core/Event/mouseevent.h \
+    GGEngine_Core/Event/keyevent.h
 
 unix {
     target.path = /usr/lib
@@ -39,5 +43,5 @@ unix {
 }
 
 # Logging
-INCLUDEPATH += $$PWD/../GGEngine/Logging/include
-DEPENDPATH += $$PWD/../GGEngine/Logging/include
+INCLUDEPATH += $$PWD/Logging/include
+DEPENDPATH += $$PWD/Logging/include

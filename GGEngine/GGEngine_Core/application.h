@@ -2,6 +2,7 @@
 #define APPLICATION_H
 
 #include "core.h"
+#include "Event/event.h"
 
 namespace GGEngine {
 
