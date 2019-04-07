@@ -12,6 +12,8 @@ macx: LIBS += -L$$OUT_PWD/../GGEngine/ -lGGEngine
 
 INCLUDEPATH += $$PWD/../GGEngine
 DEPENDPATH += $$PWD/../GGEngine
+# If want to build GGEngine as static library
+macx: PRE_TARGETDEPS += $$OUT_PWD/../GGEngine/libGGEngine.a
 
 # Logging
 INCLUDEPATH += $$PWD/../GGEngine/Logging/include
@@ -22,3 +24,5 @@ DEPENDPATH += $$PWD/../GGEngine/Logging/include
 #DEPENDPATH += $$PWD/../GGEngine/GLAD/include
 
 # Support runtime library : Multi-thread debug DLL
+
+

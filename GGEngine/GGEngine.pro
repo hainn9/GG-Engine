@@ -9,7 +9,11 @@ QT       -= gui
 TARGET = GGEngine
 TEMPLATE = lib
 
-DEFINES += GGE_BUILD_DLL
+#DEFINES += GGE_BUILD_DLL
+# If want to build GGEngine as static library
+CONFIG += staticlib
+DEFINES += GGE_BUILD_STATIC
+
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings

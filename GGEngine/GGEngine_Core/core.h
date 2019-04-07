@@ -11,10 +11,15 @@
 #    define Q_DECL_IMPORT     __attribute__((visibility("default")))
 #  endif
 
+
+#if defined(GGE_BUILD_STATIC)
+#  define GGE_API
+#else
 #if defined(GGE_BUILD_DLL)
 #  define GGE_API Q_DECL_EXPORT
 #else
 #  define GGE_API Q_DECL_IMPORT
+#endif
 #endif
 
 //#ifdef GGE_DEBUG
