@@ -16,3 +16,5 @@ DEPENDPATH += $$PWD/../GGEngine
 # Logging
 INCLUDEPATH += $$PWD/../GGEngine/Logging/include
 DEPENDPATH += $$PWD/../GGEngine/Logging/include
+
+# Support runtime library : Multi-thread debug DLL

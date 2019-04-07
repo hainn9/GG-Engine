@@ -25,7 +25,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     GGEngine_Core/application.cpp \
     GGEngine_Core/log.cpp \
-    GGEngine_Core/opengl_window.cpp
+    GGEngine_Core/opengl_window.cpp \
+    GGEngine_Core/layerstack.cpp
 
 HEADERS += \
         ggengine.h \
@@ -38,7 +39,9 @@ HEADERS += \
     GGEngine_Core/Event/mouseevent.h \
     GGEngine_Core/Event/keyevent.h \
     GGEngine_Core/window.h \
-    GGEngine_Core/opengl_window.h
+    GGEngine_Core/opengl_window.h \
+    GGEngine_Core/layer.h \
+    GGEngine_Core/layerstack.h
 
 unix {
     target.path = /usr/lib
@@ -49,6 +52,7 @@ unix {
 INCLUDEPATH += $$PWD/Logging/include
 DEPENDPATH += $$PWD/Logging/include
 
+# Static library for GLFW
 macx: LIBS += -L$$PWD/GLFW/ -lglfw3
 
 INCLUDEPATH += $$PWD/GLFW/include
@@ -60,3 +64,5 @@ LIBS += -framework OpenGL \
         -framework Cocoa \
         -framework CoreVideo \
         -framework IOKit \
+
+# Support runtime library : Multi-thread debug DLL

@@ -7,6 +7,7 @@
 #include "Event/mouseevent.h"
 #include "Event/keyevent.h"
 #include "window.h"
+#include "layerstack.h"
 #include <memory>
 #include <functional>
 
@@ -20,6 +21,9 @@ namespace GGEngine {
 
         void Run();
 
+        void PushLayer(Layer* layer);
+        void PushLayerOverlay(Layer* overlay);
+
         void OnEvent(Event& e);
 
     private:
@@ -27,6 +31,7 @@ namespace GGEngine {
     private:
         std::unique_ptr<Window> m_Window;
         bool m_Running = true;
+        LayerStack m_LayerStack;
     };
 
     Application* CreateApplication();

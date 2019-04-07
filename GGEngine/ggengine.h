@@ -7,6 +7,9 @@
 // Logging
 #include "GGEngine_Core/log.h"
 
+// Layers
+#include "GGEngine_Core/layerstack.h"
+
 // ---------EntryPoint---------------
 #include "GGEngine_Core/entrypoint.h"
 // ----------------------------------
