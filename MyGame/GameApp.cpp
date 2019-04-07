@@ -11,6 +11,13 @@ public:
 //        GGE_INFO("Example Layer");
     }
 
+    void OnImGuiRender() override
+    {
+        ImGui::Begin("Test");
+        ImGui::Text("Hello World");
+        ImGui::End();
+    }
+
     void OnEvent(GGEngine::Event& e) override
     {
         GGE_TRACE("{0} ", e);

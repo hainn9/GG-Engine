@@ -17,4 +17,8 @@ DEPENDPATH += $$PWD/../GGEngine
 INCLUDEPATH += $$PWD/../GGEngine/Logging/include
 DEPENDPATH += $$PWD/../GGEngine/Logging/include
 
+# Modern OpenGL library (GLAD)
+#INCLUDEPATH += $$PWD/../GGEngine/GLAD/include
+#DEPENDPATH += $$PWD/../GGEngine/GLAD/include
+
 # Support runtime library : Multi-thread debug DLL

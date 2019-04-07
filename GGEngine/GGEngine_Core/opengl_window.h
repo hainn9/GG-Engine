@@ -2,6 +2,7 @@
 #define OPENGL_WINDOW_H
 
 #include "window.h"
+#include "GLAD/glad/glad.h"
 #include "GLFW/glfw3.h"
 
 namespace GGEngine {
@@ -14,11 +15,13 @@ public:
 
     void OnUpdate() override;
     inline unsigned int GetWidth() const override { return m_Data.Width; }
-    unsigned int GetHeight() const override { return m_Data.Height; }
+    inline unsigned int GetHeight() const override { return m_Data.Height; }
 
     void SetEventCallbackFn(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
     void SetVSync(bool enable) override;
     bool IsVSync() const override { return m_Data.VSync; }
+
+    inline void* GetNativeWindow() const override { return m_Window; }
 
 private:
     virtual void Init(const WindowProps& props);

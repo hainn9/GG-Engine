@@ -57,9 +57,18 @@ void OpenGL_Window::Init(const WindowProps &props)
         glfwSetErrorCallback(GLFWErrorCallback);
         s_GLFWInitialized = true;
     }
+    // Set all the required options for GLFW
+    glfwWindowHint( GLFW_CONTEXT_VERSION_MAJOR, 3 );
+    glfwWindowHint( GLFW_CONTEXT_VERSION_MINOR, 3 );
+    glfwWindowHint( GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE );
+    glfwWindowHint( GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE );
 
     m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.c_str(), nullptr, nullptr);
     glfwMakeContextCurrent(m_Window);
+    int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+    if(!status)
+        GGE_CORE_ERROR("Could not initialize GLAD!");
+
     glfwSetWindowUserPointer(m_Window, &m_Data);
     SetVSync(true);
 

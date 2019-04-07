@@ -10,6 +10,9 @@
 // Layers
 #include "GGEngine_Core/layerstack.h"
 
+// Imgui
+#include "imgui/imgui.h"
+
 // ---------EntryPoint---------------
 #include "GGEngine_Core/entrypoint.h"
 // ----------------------------------

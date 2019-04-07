@@ -26,7 +26,15 @@ SOURCES += \
     GGEngine_Core/application.cpp \
     GGEngine_Core/log.cpp \
     GGEngine_Core/opengl_window.cpp \
-    GGEngine_Core/layerstack.cpp
+    GGEngine_Core/layerstack.cpp \
+    GLAD/glad.c \
+    imgui/imgui_demo.cpp \
+    imgui/imgui_draw.cpp \
+    imgui/imgui_impl_glfw.cpp \
+    imgui/imgui_impl_opengl3.cpp \
+    imgui/imgui_widgets.cpp \
+    imgui/imgui.cpp \
+    GGEngine_Core/imgui_layer.cpp
 
 HEADERS += \
         ggengine.h \
@@ -41,7 +49,18 @@ HEADERS += \
     GGEngine_Core/window.h \
     GGEngine_Core/opengl_window.h \
     GGEngine_Core/layer.h \
-    GGEngine_Core/layerstack.h
+    GGEngine_Core/layerstack.h \
+    GLAD/glad/glad.h \
+    GLAD/KHR/khrplatform.h \
+    imgui/imconfig.h \
+    imgui/imgui_impl_glfw.h \
+    imgui/imgui_impl_opengl3.h \
+    imgui/imgui_internal.h \
+    imgui/imgui.h \
+    imgui/imstb_rectpack.h \
+    imgui/imstb_textedit.h \
+    imgui/imstb_truetype.h \
+    GGEngine_Core/imgui_layer.h
 
 unix {
     target.path = /usr/lib
@@ -64,5 +83,9 @@ LIBS += -framework OpenGL \
         -framework Cocoa \
         -framework CoreVideo \
         -framework IOKit \
+
+# Modern OpenGL library (GLAD)
+#INCLUDEPATH += $$PWD/GLAD/include
+#DEPENDPATH += $$PWD/GLAD/include
 
 # Support runtime library : Multi-thread debug DLL
