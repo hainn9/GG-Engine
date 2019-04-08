@@ -8,7 +8,8 @@ public:
 
     void OnUpdate() override
     {
-//        GGE_INFO("Example Layer");
+        if(GGEngine::Input::IsKeyPressed(GGE_KEY_TAB))
+            GGE_TRACE("Tab key is pressed!");
     }
 
     void OnImGuiRender() override
@@ -20,7 +21,11 @@ public:
 
     void OnEvent(GGEngine::Event& e) override
     {
-        GGE_TRACE("{0} ", e);
+        if(e.GetEventType() == GGEngine::EventType::KeyPressed)
+        {
+            GGEngine::KeyPressedEvent& event = (GGEngine::KeyPressedEvent&)e;
+            GGE_TRACE("Key {0} is pressed", (char)event.GetKey());
+        }
     }
 };
 

@@ -9,10 +9,10 @@ QT       -= gui
 TARGET = GGEngine
 TEMPLATE = lib
 
-#DEFINES += GGE_BUILD_DLL
+DEFINES += GGE_BUILD_DLL
 # If want to build GGEngine as static library
-CONFIG += staticlib
-DEFINES += GGE_BUILD_STATIC
+#CONFIG += staticlib
+#DEFINES += GGE_BUILD_STATIC
 
 
 # The following define makes your compiler emit warnings if you use
@@ -38,7 +38,8 @@ SOURCES += \
     imgui/imgui_impl_opengl3.cpp \
     imgui/imgui_widgets.cpp \
     imgui/imgui.cpp \
-    GGEngine_Core/imgui_layer.cpp
+    GGEngine_Core/imgui_layer.cpp \
+    GGEngine_Core/window_input.cpp
 
 HEADERS += \
         ggengine.h \
@@ -64,7 +65,11 @@ HEADERS += \
     imgui/imstb_rectpack.h \
     imgui/imstb_textedit.h \
     imgui/imstb_truetype.h \
-    GGEngine_Core/imgui_layer.h
+    GGEngine_Core/imgui_layer.h \
+    GGEngine_Core/input.h \
+    GGEngine_Core/window_input.h \
+    GGEngine_Core/keycodes.h \
+    GGEngine_Core/mousebuttoncodes.h
 
 unix {
     target.path = /usr/lib

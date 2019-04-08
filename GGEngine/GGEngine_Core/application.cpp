@@ -1,6 +1,7 @@
 #include "application.h"
 #include "log.h"
 #include "GLFW/glfw3.h"
+#include "input.h"
 
 namespace GGEngine {
 
@@ -58,8 +59,6 @@ void Application::OnEvent(Event &e)
 {
     EventDispatcher dispatcher(e);
     dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
-
-    GGE_CORE_INFO("{0} ", e);
 
     for(auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
     {

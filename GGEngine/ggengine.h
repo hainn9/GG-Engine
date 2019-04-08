@@ -13,6 +13,11 @@
 // Imgui
 #include "imgui/imgui.h"
 
+// Input
+#include "GGEngine_Core/input.h"
+#include "GGEngine_Core/keycodes.h"
+#include "GGEngine_Core/mousebuttoncodes.h"
+
 // ---------EntryPoint---------------
 #include "GGEngine_Core/entrypoint.h"
 // ----------------------------------

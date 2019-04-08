@@ -15,6 +15,7 @@ struct WindowProps
         :Title(title), Width(width), Height(height) {}
 };
 
+//Window Interface
 class GGE_API Window {
 public:
     using EventCallbackFn = std::function<void(Event&)>;
