@@ -32,14 +32,14 @@ SOURCES += \
     GGEngine_Core/opengl_window.cpp \
     GGEngine_Core/layerstack.cpp \
     GLAD/glad.c \
+    GGEngine_Core/imgui_layer.cpp \
+    GGEngine_Core/window_input.cpp \
     imgui/imgui_demo.cpp \
     imgui/imgui_draw.cpp \
     imgui/imgui_impl_glfw.cpp \
     imgui/imgui_impl_opengl3.cpp \
     imgui/imgui_widgets.cpp \
-    imgui/imgui.cpp \
-    GGEngine_Core/imgui_layer.cpp \
-    GGEngine_Core/window_input.cpp
+    imgui/imgui.cpp
 
 HEADERS += \
         ggengine.h \
@@ -57,6 +57,11 @@ HEADERS += \
     GGEngine_Core/layerstack.h \
     GLAD/glad/glad.h \
     GLAD/KHR/khrplatform.h \
+    GGEngine_Core/imgui_layer.h \
+    GGEngine_Core/input.h \
+    GGEngine_Core/window_input.h \
+    GGEngine_Core/keycodes.h \
+    GGEngine_Core/mousebuttoncodes.h \
     imgui/imconfig.h \
     imgui/imgui_impl_glfw.h \
     imgui/imgui_impl_opengl3.h \
@@ -64,12 +69,7 @@ HEADERS += \
     imgui/imgui.h \
     imgui/imstb_rectpack.h \
     imgui/imstb_textedit.h \
-    imgui/imstb_truetype.h \
-    GGEngine_Core/imgui_layer.h \
-    GGEngine_Core/input.h \
-    GGEngine_Core/window_input.h \
-    GGEngine_Core/keycodes.h \
-    GGEngine_Core/mousebuttoncodes.h
+    imgui/imstb_truetype.h
 
 unix {
     target.path = /usr/lib
